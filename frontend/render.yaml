@@ -1,0 +1,14 @@
+# Render Blueprint configuration for BookMyShow Clone Frontend
+# Documentation: https://render.com/docs/blueprints
+
+services:
+  # 1. React Frontend (Vite Static / Web Service)
+  - type: web
+    name: react-frontend
+    env: docker
+    dockerContext: .
+    dockerfilePath: Dockerfile
+    plan: free
+    envVars:
+      - key: PORT
+        value: 3000
